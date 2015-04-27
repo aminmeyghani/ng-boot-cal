@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="lib/angular-bootstrap-calendar/dist/css/angular-bootstrap-calendar.css">
+  <script src="lib/angular/angular.js"></script>
+  <script src="lib/moment/moment.js "></script>
+  <script src="lib/angular-bootstrap-calendar/dist/js/angular-bootstrap-calendar-tpls.js"></script>
+  <script src="main.js"></script>
+</head>
+<body>
+  <div ng-controller="MainCtrl">
+    <mwl-calendar
+        calendar-events="events"
+        calendar-view="calendarView"
+        calendar-current-day="calendarDay"
+        calendar-control="calendarControl"
+        calendar-event-click="eventClicked(calendarEvent)"
+        calendar-edit-event-html="'<i class=\'glyphicon glyphicon-pencil\'></i>'"
+        calendar-delete-event-html="'<i class=\'glyphicon glyphicon-remove\'></i>'"
+        calendar-edit-event-click="eventEdited(calendarEvent)"
+        calendar-delete-event-click="eventDeleted(calendarEvent)"
+        calendar-auto-open="true"
+        ></mwl-calendar>
+  </div>
+</body>
+</html>
